@@ -1,52 +1,125 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #4b6cb7, #182848);
     margin: 0;
-}
-
-.login-container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    background: #121212;
+    color: #fff;
     text-align: center;
-    width: 300px;
 }
 
-input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/* Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #333;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    background: #4b6cb7;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
     transition: 0.3s;
 }
 
-button:hover {
-    background: #182848;
+nav ul li a:hover {
+    color: #ffcc00;
 }
 
-.remember-forgot {
+/* Hero Section */
+#home {
     display: flex;
-    justify-content: space-between;
-    font-size: 12px;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    text-align: center;
 }
 
-p {
+.hero-content h2 {
+    font-size: 2.5rem;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.highlight {
+    color: #ffcc00;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
     margin-top: 10px;
-    font-size: 14px;
+    padding: 10px 20px;
+    background: #ffcc00;
+    color: #121212;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ffaa00;
+}
+
+/* Projects */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-card {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+/* Social Icons */
+.social-icons a {
+    color: #ffcc00;
+    font-size: 24px;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ffaa00;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
